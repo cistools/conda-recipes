@@ -1,30 +1,15 @@
 package:
   name: jasmin_cis
-  version: "1.0.0"
+  version: "1.0.2"
 
 source:
-  fn: jasmin_cis-1.0.0.tar.gz
-  url: https://pypi.python.org/packages/source/j/jasmin_cis/jasmin_cis-1.0.0.tar.gz
-  md5: 4fc752cccca516bf1377e7ba4e380a52
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  git_url: https://github.com/cedadev/cis.git
+  git_tag: 1.0.2
 
-# build:
-  # noarch_python: True
-  # preserve_egg_dir: True
-  # entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - jasmin_cis = jasmin_cis:main
-    #
-    # Would create an entry point called jasmin_cis that calls jasmin_cis.main()
-
-
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 0
 
 requirements:
   build:
@@ -59,7 +44,6 @@ test:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
     - cis version
-    - nosetests -P --all-modules -v -w $SRC_DIR/test/unit
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -68,14 +52,9 @@ test:
     - mock
     - nose
     - pyhamcrest
-    # Put any additional test requirements here.  For example
-    # - nose
 
 about:
   home: http://proj.badc.rl.ac.uk/cedaservices/wiki/JASMIN/CommunityIntercomparisonSuite
   license: GNU Lesser General Public License v3 or later (LGPLv3+)
   summary: 'JASMIN Community Inter-comparison Suite'
 
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml
