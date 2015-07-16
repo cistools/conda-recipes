@@ -20,10 +20,9 @@ requirements:
     - numpy
     - cython
     - proj4
+    # On OSX you have to pin the geos version explicitly when building alongside basemap as the conda resolver can't
+     # seem to work it out correctly.
     - geos ==3.3.3
-    # On OSX We need to effectively pin the geos version to the
-    # one used by the specific shapely being targetted (we're letting
-    # conda's package solver will deal with that).
     - shapely >=1.5.6
     - owslib
     - pyshp
