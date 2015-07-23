@@ -1,10 +1,10 @@
 package:
   name: cis
-  version: "1.1.0"
+  version: "1.1.1"
 
 source:
   git_url: https://github.com/cedadev/cis.git
-  git_tag: 1.1.0
+  git_tag: 1.1.1
 
 build:
   # If this is a new build for the same version, increment the build
@@ -19,7 +19,7 @@ requirements:
     - numpy
     - scipy
     - iris >=1.8.0
-    - pyhdf
+    - pyhdf  # [not win]
     - psutil
     - basemap >=1.0.7
 
@@ -30,7 +30,7 @@ requirements:
     - numpy
     - scipy
     - iris >=1.8.0
-    - pyhdf
+    - pyhdf  # [not win]
     - psutil
     - basemap >=1.0.7
 
@@ -38,7 +38,6 @@ test:
   # Python imports
   imports:
     - cis
-  # - pyhdf
 
   commands:
     # You can put test commands to be run here.  Use this to test that the
